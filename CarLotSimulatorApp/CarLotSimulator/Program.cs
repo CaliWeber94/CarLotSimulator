@@ -23,7 +23,8 @@ namespace CarLotSimulator
             carone.IsDriveable = true;
             carone.EngineNoise = "vroom vroom";
             carone.HonkNoise = "beep beep";
-            
+            carone.MakeHonkNoise(carone.HonkNoise);
+            carone.MakeEngineNoise(carone.EngineNoise);
 
 
             var cartwo = new Car()
@@ -36,10 +37,14 @@ namespace CarLotSimulator
             EngineNoise = "vrooooom",
             HonkNoise = "beeeeeep",
             };
+            cartwo.MakeEngineNoise(cartwo.EngineNoise);
+            cartwo.MakeHonkNoise(cartwo.HonkNoise);
 
             var carthree = new Car("Ford", "Focus", 2020, true, "vrooooom vroooom", "beeeeeep beeeeep");
+            carthree.MakeEngineNoise(carthree.EngineNoise);
+            carthree.MakeHonkNoise(carthree.HonkNoise);
 
-            Console.WriteLine($"These are the cars available {carone}, {cartwo}, {carthree}");
+            Console.WriteLine($"These are the cars available {carone.Make} {carone.Model}, {cartwo.Make} {cartwo.Model}, {carthree.Make} {carthree.Model}");
 
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars

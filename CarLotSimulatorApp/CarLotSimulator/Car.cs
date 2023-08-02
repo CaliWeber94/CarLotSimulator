@@ -22,27 +22,27 @@ namespace CarLotSimulator
 
 
         public Car() { }    
-        public Car(string make, string model, int year, bool isDriveable, string EngineNoise, string HonkNoise)
+        public Car(string make, string model, int year, bool isDriveable, string engineNoise, string honkNoise)
         {
             Make=make;
             Model=model;
             Year=year;
             IsDriveable=isDriveable;
-            EngineNoise = EngineNoise;
-            HonkNoise = HonkNoise;
+            EngineNoise = engineNoise;
+            HonkNoise =honkNoise;
             
         }   
 
-        public static void MakeEngineNoise(string engineNoise)
+        public void MakeEngineNoise(string engineNoise)
         {
-            engineNoise =engineNoise;
+            EngineNoise =engineNoise;
             Console.WriteLine($"the engine makes a {engineNoise} noise");
 
         }
 
-        public static void MakeHonkNoise(string honkNoise)
+        public void MakeHonkNoise(string honkNoise)
         {
-            honkNoise = honkNoise;
+            HonkNoise = honkNoise;
             Console.WriteLine($"The horn makes a {honkNoise} noise ");
 
 
